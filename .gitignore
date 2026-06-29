@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# R
+.Rhistory
+.RData
+.Rapp.history
+.Ruserdata
+.Rproj.user/
+*.Rproj
+
+# Salidas de knitr / rmarkdown
+*.html
+*_cache/
+*_files/
+
+# Datos restringidos y resultados generados (no versionar)
+/data/*
+!/data/README.md
+/metadata/
+/Reads/
+/qiime2_output/
+/R_output/
