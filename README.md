@@ -19,7 +19,7 @@ crudas hasta los modelos de regresión, organizado en scripts numerados.
 ```
 nemo-16S-microbiota-multiomica/
 ├── scripts/     pipeline numerado (00–17): .sh = QIIME2, .R = análisis estadístico
-├── env/         entorno conda de QIIME2
+├── env/         entornos: imágenes Docker, conda de QIIME2 y versiones de R
 ├── data/        entradas restringidas (no incluidas); ver data/README.md
 ├── LICENSE
 └── README.md
@@ -32,10 +32,15 @@ están en `.gitignore`.
 
 ## Requisitos de software
 
-- **QIIME2** 2024.10 (amplicon). Reconstruir el entorno con
+QIIME2 y PICRUSt2 se ejecutaron mediante **Docker** (plataforma `linux/amd64`); las
+imágenes y el entorno de R están documentados en [`env/`](env/) (`docker-images.txt`,
+`r-session.txt` y el YAML de conda).
+
+- **QIIME2** 2024.10 — imagen `quay.io/qiime2/amplicon:2024.10`. Como alternativa sin
+  Docker, el entorno conda se reconstruye con
   `conda env create -f env/qiime2-amplicon-2024.10-py310-osx-conda.yml`.
-- **PICRUSt2** 2.5.3, ejecutado vía Docker (`10_picrust2.sh`).
-- **R** ≥ 4.4 con los paquetes:
+- **PICRUSt2** 2.5.3 — imagen `quay.io/biocontainers/picrust2:2.5.3` (ver `10_picrust2.sh`).
+- **R** 4.5.2 con los paquetes (versiones exactas en `env/r-session.txt`):
   - Microbioma: `phyloseq`, `qiime2R`, `microbiome`, `vegan`, `Maaslin2`.
   - Modelos y diagnóstico: `broom`, `car`, `sandwich`, `lmtest`, `logistf`, `boot`, `pROC`.
   - Manejo de datos y figuras: `tidyverse` (`dplyr`, `tidyr`, `ggplot2`…), `readxl`,
