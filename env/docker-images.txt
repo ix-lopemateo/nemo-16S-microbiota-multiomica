@@ -1,0 +1,14 @@
+# Imágenes Docker utilizadas (plataforma linux/amd64)
+
+# Procesado de secuencias 16S — QIIME2 2024.10
+quay.io/qiime2/amplicon:2024.10
+
+# Predicción funcional — PICRUSt2 2.5.3
+quay.io/biocontainers/picrust2:2.5.3
+
+# Descarga:
+#   docker pull --platform linux/amd64 quay.io/qiime2/amplicon:2024.10
+#   docker pull --platform linux/amd64 quay.io/biocontainers/picrust2:2.5.3
+#
+# Alternativa para QIIME2 sin Docker: reconstruir el entorno conda con
+#   conda env create -f env/qiime2-amplicon-2024.10-py310-osx-conda.yml

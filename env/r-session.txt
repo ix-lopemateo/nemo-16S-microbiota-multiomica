@@ -1,0 +1,35 @@
+# Entorno de R utilizado en los análisis estadísticos
+
+R 4.5.2
+
+# Paquetes (versiones empleadas)
+boot           1.3.32
+broom          1.0.13
+car            3.1.5
+corrplot       0.95
+dplyr          1.2.1
+ggplot2        4.0.3
+kableExtra     1.4.0
+knitr          1.51
+lmtest         0.9.40
+logistf        1.26.1
+Maaslin2       1.24.1
+microbiome     (Bioconductor)
+patchwork      1.3.2
+phyloseq       1.54.2
+pROC           1.19.0.1
+qiime2R        0.99.6
+RColorBrewer   1.1.3
+readxl         1.5.0
+sandwich       3.1.1
+scales         1.4.0
+tidyr          1.3.2
+tidyverse      2.0.0
+vegan          2.7.3
+viridis        0.6.5
+writexl        1.5.4
+
+# Notas:
+# - phyloseq, Maaslin2 y microbiome se instalan desde Bioconductor.
+# - qiime2R desde GitHub (jbisanz/qiime2R).
+# - El resto desde CRAN.
